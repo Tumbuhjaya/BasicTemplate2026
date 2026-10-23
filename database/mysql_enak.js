@@ -1,10 +1,11 @@
- module.exports.connection = require('knex')({
+require('dotenv').config()
+module.exports.connection = require('knex')({
   client: 'mysql',
   connection: {
-    host : '147.139.167.33',
-    user : 'root',
-    port: '3306',
-    password : 'Grafika9',
-    database : '2026_basic_sql'
+    host     : process.env.HOST1,
+    port	   : process.env.PORT1,
+    user     : process.env.USER1,
+    password : process.env.PWD1,
+    database : process.env.DB1
   }
 });

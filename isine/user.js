@@ -151,13 +151,10 @@ router.get('/edit/:id', cek_login, function(req, res) {
       }
     }
     try {
-      console.log('data');
-
+      // console.log(post,'adb');
       await sql_enak('user').where('id_user','=',post.id_user).update(post).then(data=>{
-        console.log('data2');
-
-        console.log(data);
-        
+        // console.log('data2');
+        // console.log(data);
         res.status(200).json({ status: 200, message: "sukses", data: data})
      })
     } catch (error) {
